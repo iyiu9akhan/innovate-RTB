@@ -2,9 +2,9 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className='bg-red-800 py-10'>
-        <div className='w-[1409px] mx-auto bg-blue-600 py-10'>
-            navbar
+    <div className='bg-red-500 py-10'>
+        <div className='w-[1409px] mx-auto bg-blue-300 py-10'>
+            Lorem ipsum dolor sit amet.
         </div>
     </div>
   )
