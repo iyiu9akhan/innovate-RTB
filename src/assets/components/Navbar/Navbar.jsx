@@ -4,7 +4,11 @@ const Navbar = () => {
   return (
     <div className='bg-red-500 py-10'>
         <div className='w-[1409px] mx-auto bg-blue-300 py-10'>
-            Lorem ipsum dolor sit amet.
+            <div className='flex'>
+              <div>lorem</div>
+              <div>lorem</div>
+              <div>lorem</div>
+            </div>
         </div>
     </div>
   )
