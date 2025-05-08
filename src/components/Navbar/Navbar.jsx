@@ -10,7 +10,7 @@ function Navbar() {
                     <a href="#"><img src={logo} alt="main_logo"/></a>
                 </div>
                 <div>
-                    <ul className='flex gap-x-[50px] capitalize font-secondary text-lg font-medium text-white'>
+                    <ul className='flex gap-x-[50px] capitalize font-secondary text-lg font-medium text-black'>
                         <li><a href="#">home</a></li>
                         <li><a href="#">features</a></li>
                         <li><a href="#">service</a></li>
@@ -18,8 +18,9 @@ function Navbar() {
                         <li><a href="#">blog</a></li>
                     </ul>
                 </div>
-                <div>
-
+                <div className='text-black font-secondary font-medium text-lg leading-[200%] '>
+                    <a href="#">login</a>
+                    <a href="#">register</a>
                 </div>
             </div>
         </div>
