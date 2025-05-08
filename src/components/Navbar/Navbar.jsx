@@ -5,7 +5,7 @@ import Container from "../Layout/container";
 function Navbar() {
   return (
     <div className="pt-8 absolute top-0 left-0 w-full z-10">
-        <Container>
+      <Container>
         <div className="flex justify-between items-center">
           <div>
             <a href="#">
@@ -40,7 +40,7 @@ function Navbar() {
             </button>
           </div>
         </div>
-        </Container>
+      </Container>
     </div>
   );
 }

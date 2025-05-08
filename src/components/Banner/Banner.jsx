@@ -14,13 +14,13 @@ function Banner({ children }) {
             The world's first project management platform that connects
             everything
           </p>
-         
-            <input
-              type="text"
-              className="h-[66px] w-[480px] rounded-[6px] bg-white mb-98px relative"
-            />
-            <button className="absolute right-0 capitalize px-[28.5px] py-[15px] bg-btn rounded-[6px] cursor-pointer">try for free</button>
-       
+          <input
+            type="text"
+            className="h-[66px] w-[480px] rounded-[6px] bg-white mb-98px relative"
+          />
+          <button className="absolute right-0 capitalize px-[28.5px] py-[15px] bg-btn rounded-[6px] cursor-pointer">
+            try for free
+          </button>
         </div>
       </Container>
     </div>
