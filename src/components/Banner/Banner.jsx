@@ -16,9 +16,9 @@ function Banner({ children }) {
           </p>
           <input
             type="text"
-            className="h-[66px] w-[480px] rounded-[6px] bg-white mb-98px relative"
+            className="h-[66px] w-[480px] rounded-[6px] bg-white mb-98px relative "
           />
-          <button className="absolute right-0 capitalize px-[28.5px] py-[15px] bg-btn rounded-[6px] cursor-pointer">
+          <button className="absolute right-[728px] bottom-1  px-[28.5px] py-[15px] bg-btn rounded-[6px] cursor-pointer text-btn-text text-lg font-medium font-secondary leading-[20px] capitalize">
             try for free
           </button>
         </div>
