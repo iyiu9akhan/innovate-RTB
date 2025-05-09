@@ -21,11 +21,11 @@ function Banner({ children }) {
               className="h-[66px] w-[480px] rounded-[6px] bg-white   outline-0 pl-[24px] placeholder:text-[16px] capitalize leading-[26px] font-primary text-black"
               placeholder="Your business email"
             />
-            <button className="absolute right-[472px] bottom-2  px-[28.5px] py-[15px] bg-btn rounded-[6px] cursor-pointer text-btn-text text-lg font-medium font-secondary leading-[20px] capitalize">
+            <button className="absolute right-[472px] bottom-2  px-[28.5px] py-[15px] bg-btn rounded-[6px] cursor-pointer text-blue-color text-lg font-medium font-secondary leading-[20px] capitalize">
               try for free
             </button>
           </div>
-          <img src={laptop_screen} alt="laptop_screen" className="mx-auto"/>
+          <img src={laptop_screen} alt="laptop_screen" className="mx-auto" />
         </div>
       </Container>
     </div>
