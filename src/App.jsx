@@ -1,6 +1,7 @@
 import "./App.css";
 import Banner from "./components/Banner/Banner";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/navbar/navbar";
+
 
 function App() {
   return (
