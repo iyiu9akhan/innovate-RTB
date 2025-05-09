@@ -4,7 +4,7 @@ import laptop_screen from "../../assets/laptop_screen.png";
 
 function Banner({ children }) {
   return (
-    <div className="bg-[url('/src/assets/bg_shape.png')] bg-no-repeat bg-cover bg-center relative w-full pt-[92px]">
+    <div className="bg-[url('/src/assets/bg_shape.png')] bg-no-repeat  relative w-full pt-[92px]">
       {children}
       <Container>
         <div className="text-center">
@@ -25,7 +25,7 @@ function Banner({ children }) {
               try for free
             </button>
           </div>
-          <img src={laptop_screen} alt="laptop_screen" />
+          <img src={laptop_screen} alt="laptop_screen" className="mx-auto"/>
         </div>
       </Container>
     </div>
