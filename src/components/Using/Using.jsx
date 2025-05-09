@@ -28,7 +28,8 @@ function Using() {
   return (
     <div>
       <Container>
-        <div className="flex justify-between px-[58px] mb-[116px]">
+        <div className="px-[58px]">
+            <div className="flex justify-between mb-[116px]">
           <h5 className="font-primary font-bold text-[46px] capitalize leading-[58px] text-blue-color w-[504px] tracking-[-1px]">
             how simple is it to use our platform
           </h5>
@@ -45,6 +46,7 @@ function Using() {
               <p className="w-[300px] font-secondary text-lg leading-8 text-info">{item.details}</p>
             </div>
           ))}
+        </div>
         </div>
       </Container>
     </div>
