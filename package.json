@@ -1,6 +1,6 @@
 {
-  "name": "innovate-react-tailwind",
-  "homepage": "https://iyiu9akhan.github.io/innovate-react-tailwind",
+  "name": "innovate-rtb",
+  "homepage": "https://iyiu9akhan.github.io/innovate-RTB",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -31,5 +31,9 @@
     "globals": "^16.0.0",
     "pages": "^0.0.16",
     "vite": "^6.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iyiu9akhan/innovate-RTB.git"
   }
 }
