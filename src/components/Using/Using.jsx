@@ -26,27 +26,35 @@ function Using() {
     },
   ];
   return (
-    <div>
+    <div className="mb-[160px]">
       <Container>
         <div className="px-[58px]">
-            <div className="flex justify-between mb-[116px]">
-          <h5 className="font-primary font-bold text-[46px] capitalize leading-[58px] text-blue-color w-[504px] tracking-[-1px]">
-            how simple is it to use our platform
-          </h5>
-          <p className="w-[530px] text-lg font-secondary font-normal leading-8 tracking-[-0.045px] text-info">
-            This Innovate Con guide explores the most popular platforms and
-            walks you through how to use them to grow your business.
-          </p>
-        </div>
-        <div className="flex justify-between text-center">
-          {infoData.map((item) => (
-            <div>
-              <img src={item.img} alt="#icon_one" className="mx-auto mb-[26px]"/>
-              <h4 className="font-primary font-bold text-[24px] leading-9 text-blue-color  w-[300px] mx-auto mb-3">{item.title}</h4>
-              <p className="w-[300px] font-secondary text-lg leading-8 text-info">{item.details}</p>
-            </div>
-          ))}
-        </div>
+          <div className="flex justify-between mb-[116px]">
+            <h5 className="font-primary font-bold text-[46px] capitalize leading-[58px] text-blue-color w-[504px] tracking-[-1px]">
+              how simple is it to use our platform
+            </h5>
+            <p className="w-[530px] text-lg font-secondary font-normal leading-8 tracking-[-0.045px] text-info-color">
+              This Innovate Con guide explores the most popular platforms and
+              walks you through how to use them to grow your business.
+            </p>
+          </div>
+          <div className="flex justify-between text-center">
+            {infoData.map((item) => (
+              <div>
+                <img
+                  src={item.img}
+                  alt="#icon_one"
+                  className="mx-auto mb-[26px]"
+                />
+                <h4 className="font-primary font-bold text-[24px] leading-9 text-blue-color  w-[300px] mx-auto mb-3">
+                  {item.title}
+                </h4>
+                <p className="w-[300px] font-secondary text-lg leading-8 text-info-color">
+                  {item.details}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
     </div>
