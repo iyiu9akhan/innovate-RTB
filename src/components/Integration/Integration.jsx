@@ -31,45 +31,10 @@ function Integration() {
             </p>
             <Button className="mt-[40px] ">get started</Button>
           </div>
-          {/* <div>
-            <div className="grid grid-cols-4 gap-[30px]">
-              <Brand_logo className="col-span-2 w-[332px]">
-                <img src={brand_one} alt="#brand_one" />
-              </Brand_logo>
-
-              <Brand_logo className="col-span-2 w-[332px]">
-                <img src={brand_two} alt="#brand_two" />
-              </Brand_logo>
-
-              <Brand_logo className="w-[151px]">
-                <img src={brand_three} alt="#brand_three" />
-              </Brand_logo>
-
-              <Brand_logo className="col-span-2 w-[332px]">
-                <img src={brand_four} alt="#brand_four" />
-              </Brand_logo>
-
-              <Brand_logo className="w-[151px]">
-                <img src={brand_five} alt="#brand_five" />
-              </Brand_logo>
-
-              <Brand_logo className="col-span-2 w-[290px]">
-                <img src={brand_six} alt="#brand_six" />
-              </Brand_logo>
-
-              <Brand_logo className="w-[151px]">
-                <img src={brand_seven} alt="#brand_seven" />
-              </Brand_logo>
-
-              <Brand_logo className="w-[196px]">
-                <img src={brand_eight} alt="#brand_eight" />
-              </Brand_logo>
-            </div>
-          </div> */}
-          <div>
+          <div className="mb-[120px]">
             <div className="flex justify-between gap-x-[30px] mb-[35px]">
               <Brand_logo className=" w-[332px]">
-                <img src={brand_one} alt="#brand_one" />
+                <img src={brand_one} alt="#brand_one" className="max-w-full max-h-full object-contain"/>
               </Brand_logo>
 
               <Brand_logo className=" w-[332px]">
