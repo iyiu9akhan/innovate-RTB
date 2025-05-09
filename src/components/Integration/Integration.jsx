@@ -9,13 +9,15 @@ import brand_five from "../../assets/integration/brand_five.png";
 import brand_six from "../../assets/integration/brand_six.png";
 import brand_seven from "../../assets/integration/brand_seven.png";
 import brand_eight from "../../assets/integration/brand_eight.png";
-import Brand_logo from "../Layout/Brand_logo";
+import Brand_logo from "../Layout/Brand_logo"; //integration section's right side brand logo
+import integration_shape from "../../assets/integration/integration_shape.png";
 
 function Integration() {
   return (
-    <div className="bg-sectionBG-color pt-[124px]">
+    <div className="bg-sectionBG-color pt-[124px] relative">
+        <img src={integration_shape} alt="#integration_shape" className="absolute bottom-[23px] left-[100px]" />
       <Container>
-        <div className="flex justify-between">
+        <div className="flex justify-between relative">
           <div className="pt-[49px] pb-[23px]">
             <p className="font-secondary font-medium text-[20px] text-[#FF7364] capitalize mb-1">
               integrations
