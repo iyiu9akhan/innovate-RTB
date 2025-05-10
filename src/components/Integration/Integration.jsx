@@ -14,7 +14,7 @@ import integration_shape from "../../assets/integration/integration_shape.png";
 
 function Integration() {
   return (
-    <div className="bg-sectionBG-color pt-[124px] relative">
+    <div className="bg-sectionBG-color pt-[124px] relative mb-[140px]">
         <img src={integration_shape} alt="#integration_shape" className="absolute bottom-[23px] left-[100px]" />
       <Container>
         <div className="flex justify-between relative">
