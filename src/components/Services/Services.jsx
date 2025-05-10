@@ -4,6 +4,7 @@ import services_one from "../../assets/services/services_one.png";
 import services_two from "../../assets/services/services_two.png";
 import services_three from "../../assets/services/services_three.png";
 import services_four from "../../assets/services/services_four.png";
+import Button from "../Layout/Button";
 
 function Services() {
   const services_data = [
@@ -37,7 +38,7 @@ function Services() {
     },
   ];
   return (
-    <div>
+    <div className="mb-[140px]">
       <Container>
         <div className="text-center">
           <h6 className="font-secondary font-medium text-[20px] text-[#FF7364] capitalize  mb-1">
@@ -47,7 +48,7 @@ function Services() {
             how it works
           </h4>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between mb-20">
           {services_data.map((item) => (
             <div className=" border-1 border-[#DCE7FE] rounded-[20px] p-9">
               <img src={item.img} alt="#features_one" className="mb-[26px] "/>
@@ -57,6 +58,9 @@ function Services() {
             </div>
           ))}
         </div>
+          <div className="text-center">
+            <Button>view more</Button>
+          </div>
       </Container>
     </div>
   );
