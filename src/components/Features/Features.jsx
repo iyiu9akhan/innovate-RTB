@@ -45,9 +45,6 @@ function Features() {
                   </p>
                 </div>
               ))}
-              {/* <button className="border-2 border-blueBtn-color capitalize font-secondary font-medium text-lg leading-[20px] text-white rounded-[6px] w-[196px] h-[60px]  bg-blueBtn-color mt-[98px] cursor-pointer hover:bg-transparent hover:text-black hover:border-2 hover:border-solid hover:border-blueBtn-color transition-all duration-300">
-                get started
-              </button> */}
               <Button className= 'mt-[98px] '>get started</Button>
             </div>
           </div>
