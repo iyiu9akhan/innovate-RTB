@@ -48,13 +48,13 @@ function Services() {
             how it works
           </h4>
         </div>
-        <div className="flex justify-between mb-20">
+        <div className="flex justify-between mb-20 ">
           {services_data.map((item) => (
-            <div className=" border-1 border-[#DCE7FE] rounded-[20px] p-9">
+            <div className=" border-1 border-[#DCE7FE] rounded-[20px] p-9 hover:bg-blueBtn-color group transition-all duration-500">
               <img src={item.img} alt="#features_one" className="mb-[26px] "/>
-              <h5 className="mb-2 font-primary font-bold text-[22px] leading-6 text-blue-color">{item.title}</h5>
-              <p className="font-secondary text-4 leading-[26px] tracking-[-0.04px] w-[258px] mb-[26px] text-info-color">{item.details}</p>
-              <button className="cursor-pointer text-[#3639A4] font-secondary text-4 font-medium leading-[26px] ">{item.button}</button>
+              <h5 className="mb-2 font-primary font-bold text-[22px] leading-6 text-blue-color group-hover:text-white transition-all duration-500">{item.title}</h5>
+              <p className="font-secondary text-4 leading-[26px] tracking-[-0.04px] w-[258px] mb-[26px] text-info-color group-hover:text-white transition-all duration-500">{item.details}</p>
+              <button className="cursor-pointer text-[#3639A4] font-secondary text-4 font-medium leading-[26px] group-hover:text-white transition-all duration-500">{item.button}</button>
             </div>
           ))}
         </div>
