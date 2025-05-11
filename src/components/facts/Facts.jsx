@@ -21,7 +21,7 @@ function Facts() {
     ]
 
   return (
-    <div>
+    <div className='mb-[140px]'>
         <Container>
             <div className="rounded-[40px] bg-blueBtn-color bg-[url('/src/assets/facts/texture.png')] bg-no-repeat flex  ">
                 <div className='mt-[44px] ml-[41px] mr-[45px] content-end'>
