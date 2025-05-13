@@ -7,18 +7,53 @@ import human_three from "../../assets/testimonial/human_three.png";
 import human_four from "../../assets/testimonial/human_four.png";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
-import React from "react";
 import Slider from "react-slick";
-
+import "slick-carousel/slick/slick.css";
 
 function Testimonial() {
-  var settings = {
-    dots: true,
+  const slider = {
+    // dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
   };
+
+  const slider_info = [
+    {
+      img: human_one,
+      review:
+        "Excellent service and support! The team helped me navigate the complexities of trading with ease. Highly recommended!",
+      name: "sarah johnson",
+      title: "financial analyst",
+      // rating: 5,
+    },
+    {
+      img: human_two,
+      review:
+        "Decent platform but customer service could be faster. Had some issues with withdrawals that took time to resolve.",
+      name: "michael chen",
+      title: "entrepreneur",
+      // rating: 3,
+    },
+    {
+      img: human_three,
+      review:
+        "Absolutely life-changing experience! My portfolio grew 30% in just 3 months thanks to their expert advice.",
+      name: "emily rodriguez",
+      title: "freelance designer",
+      // rating: 5,
+    },
+    {
+      img: human_four,
+      review:
+        "Good educational resources but the platform interface feels outdated. Could use some modern UX improvements.",
+      name: "david wilson",
+      title: "software engineer",
+      // rating: 4,
+    },
+  ];
+
   return (
     <div className="bg-[#F4FAFA] py-[200px]">
       <Container>
@@ -97,64 +132,52 @@ function Testimonial() {
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-[20px] p-[60px] relative mt-[80px]">
-            <p className="font-secondary font-normal text-[22px] leading-[44px] text-info-color mb-[37px] w-[567px]">
-              “Wow. Amazing company amazing Expert Manager. They know how to get
-              things done when it comes to online trading.{" "}
-            </p>
-            <div className="flex justify-between">
-              <div>
-                <h5 className="font-primary capitalize text-[24px] font-bold leading-[36px] text-[#30344E] mb-1">
-                  robert fox
-                </h5>
-                <p className="font-secondary font-normal text-[16px] leading-[26px] text-[#30344E]">
-                  Digital Marketer
-                </p>
-              </div>
-              <div className="flex text-[#FFC34C] gap-1 ml-[18px] items-end">
-                <p>
-                  <FaStar size={18} />
-                </p>
-                <p>
-                  <FaStar size={18} />
-                </p>
-                <p>
-                  <FaStar size={18} />
-                </p>
-                <p>
-                  <FaStar size={18} />
-                </p>
-                <p>
-                  <FaStarHalfAlt size={18} />
-                </p>
-              </div>
-            </div>
-            <div className="h-[124px] w-[124px] outline-10 rounded-[50%] absolute top-[-80px] outline-[#F7F7FC]">
-                <img src={human_three} alt="human_three" className="rounded-[50%]"/>
-            </div>
+
+          <div className="w-[687px]">
+            <Slider {...slider}>
+              {slider_info.map((item , index) => (
+                <div key={index} className="bg-white rounded-[20px] p-[60px] relative mt-[80px]">
+                  <p className="font-secondary font-normal text-[22px] leading-[44px] text-info-color mb-[37px] w-[567px]">
+                    {item.review}
+                  </p>
+                  <div className="flex justify-between">
+                    <div>
+                      <h5 className="font-primary capitalize text-[24px] font-bold leading-[36px] text-[#30344E] mb-1">
+                        {item.name}
+                      </h5>
+                      <p className="font-secondary font-normal text-[16px] leading-[26px] text-[#30344E] capitalize">
+                        {item.title}
+                      </p>
+                    </div>
+                    <div className="flex text-[#FFC34C] gap-1 ml-[18px] items-end">
+                    <p>
+                      <FaStar size={18} />
+                    </p>
+                    <p>
+                      <FaStar size={18} />
+                    </p>
+                    <p>
+                      <FaStar size={18} />
+                    </p>
+                    <p>
+                      <FaStar size={18} />
+                    </p>
+                    <p>
+                      <FaStarHalfAlt size={18} />
+                    </p>
+                  </div>
+                  </div>
+                  <div className="h-[124px] w-[124px] outline-10 rounded-[50%] absolute top-[-80px] outline-[#F7F7FC]">
+                    <img
+                      src={item.img}
+                      alt="human_one"
+                      className="rounded-[50%]"
+                    />
+                  </div>
+                </div>
+              ))}
+            </Slider>
           </div>
-        </div>
-        <div>
-           <Slider {...settings}>
-      <div>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
-    </Slider>
         </div>
       </Container>
     </div>
