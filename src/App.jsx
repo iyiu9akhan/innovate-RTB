@@ -6,6 +6,7 @@ import Integration from "./components/Integration/Integration";
 import Navbar from "./components/navbar/navbar";
 import Pricing from "./components/Pricing/Pricing";
 import Services from "./components/Services/Services";
+import Testimonial from "./components/Testimonial/Testimonial";
 import Using from "./components/Using/Using";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Services></Services>
       <Facts></Facts>
       <Pricing></Pricing>
+      <Testimonial></Testimonial>
     </>
   );
 }
