@@ -155,7 +155,7 @@ function Testimonial() {
                     <div className="flex items-end gap-1">
                       {[...Array(5)].map((unused, index) => (
                         <span key={index}>
-                          {i < item.rating ? (
+                          {index < item.rating ? (
                             <FaStar color="#ffc107" size={18}/>
                           ) : (
                             <FaStar color="#ddd" size={18}/>
