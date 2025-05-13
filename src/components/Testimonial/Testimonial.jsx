@@ -26,7 +26,7 @@ function Testimonial() {
         "Excellent service and support! The team helped me navigate the complexities of trading with ease. Highly recommended!",
       name: "sarah johnson",
       title: "financial analyst",
-      // rating: 5,
+      rating: 2,
     },
     {
       img: human_two,
@@ -34,7 +34,7 @@ function Testimonial() {
         "Decent platform but customer service could be faster. Had some issues with withdrawals that took time to resolve.",
       name: "michael chen",
       title: "entrepreneur",
-      // rating: 3,
+      rating: 1,
     },
     {
       img: human_three,
@@ -42,7 +42,7 @@ function Testimonial() {
         "Absolutely life-changing experience! My portfolio grew 30% in just 3 months thanks to their expert advice.",
       name: "emily rodriguez",
       title: "freelance designer",
-      // rating: 5,
+      rating: 3,
     },
     {
       img: human_four,
@@ -50,7 +50,7 @@ function Testimonial() {
         "Good educational resources but the platform interface feels outdated. Could use some modern UX improvements.",
       name: "david wilson",
       title: "software engineer",
-      // rating: 4,
+      rating: 4,
     },
   ];
 
@@ -135,8 +135,11 @@ function Testimonial() {
 
           <div className="w-[687px]">
             <Slider {...slider}>
-              {slider_info.map((item , index) => (
-                <div key={index} className="bg-white rounded-[20px] p-[60px] relative mt-[80px]">
+              {slider_info.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-[20px] p-[60px] relative mt-[80px]"
+                >
                   <p className="font-secondary font-normal text-[22px] leading-[44px] text-info-color mb-[37px] w-[567px]">
                     {item.review}
                   </p>
@@ -149,23 +152,17 @@ function Testimonial() {
                         {item.title}
                       </p>
                     </div>
-                    <div className="flex text-[#FFC34C] gap-1 ml-[18px] items-end">
-                    <p>
-                      <FaStar size={18} />
-                    </p>
-                    <p>
-                      <FaStar size={18} />
-                    </p>
-                    <p>
-                      <FaStar size={18} />
-                    </p>
-                    <p>
-                      <FaStar size={18} />
-                    </p>
-                    <p>
-                      <FaStarHalfAlt size={18} />
-                    </p>
-                  </div>
+                    <div className="flex items-end gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <span key={i}>
+                          {i < item.rating ? (
+                            <FaStar color="#ffc107" size={18}/>
+                          ) : (
+                            <FaStar color="#ddd" size={18}/>
+                          )}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                   <div className="h-[124px] w-[124px] outline-10 rounded-[50%] absolute top-[-80px] outline-[#F7F7FC]">
                     <img
