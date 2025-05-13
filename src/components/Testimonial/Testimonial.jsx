@@ -7,8 +7,18 @@ import human_three from "../../assets/testimonial/human_three.png";
 import human_four from "../../assets/testimonial/human_four.png";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
+import React from "react";
+import Slider from "react-slick";
+
 
 function Testimonial() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <div className="bg-[#F4FAFA] py-[200px]">
       <Container>
@@ -123,6 +133,28 @@ function Testimonial() {
                 <img src={human_three} alt="human_three" className="rounded-[50%]"/>
             </div>
           </div>
+        </div>
+        <div>
+           <Slider {...settings}>
+      <div>
+        <h3>1</h3>
+      </div>
+      <div>
+        <h3>2</h3>
+      </div>
+      <div>
+        <h3>3</h3>
+      </div>
+      <div>
+        <h3>4</h3>
+      </div>
+      <div>
+        <h3>5</h3>
+      </div>
+      <div>
+        <h3>6</h3>
+      </div>
+    </Slider>
         </div>
       </Container>
     </div>
