@@ -6,58 +6,61 @@ import Button from "../Layout/Button";
 import { HiOutlineUserGroup } from "react-icons/hi2";
 import { PiBuildingOffice } from "react-icons/pi";
 
-
 function Pricing() {
   const pricing_data = [
     {
       icon: <FaRegUser />,
-      icon_color: "#2290F5",
-      icon_bg: "#E8F2FA",
+      icon_color: "text-[#2290F5]",
+      icon_bg: "bg-[#E8F2FA] group-hover:bg-white",
       title: "personal",
       heading: "$10",
       dis_digit: "20",
       feature: [
         [
-           "Calendar View",
-           "Custom Templates",
-           "list view",
-           "board view",
+          "Calendar View",
+          "Custom Templates",
+          "list view",
+          "board view",
           "Assignees & Due Dates",
-     ],
+        ],
       ],
-      feature_icon: <GiCheckMark />
+      feature_icon: <GiCheckMark />,
     },
     {
       icon: <HiOutlineUserGroup />,
-      icon_color: "#3639A4",
-      icon_bg: "#EAEBF6",
+      icon_color: "text-[#3639A4]",
+      icon_bg: "bg-[#E6E6FA] group-hover:bg-white",
       title: "team",
       heading: "$25",
       dis_digit: "35",
       feature: [
-        [ "Timeline Review",
+        [
+          "Timeline Review",
           "Custom fields",
-         "Custom Templates",
+          "Custom Templates",
           "Task dependencies",
-          "Milestones Manage",],
+          "Milestones Manage",
+        ],
       ],
-      feature_icon: <GiCheckMark />
+      feature_icon: <GiCheckMark />,
     },
     {
       icon: <PiBuildingOffice />,
-      icon_color: "#9472F9",
-      icon_bg: "#ECE8F9",
+      icon_color: "text-[#9472F9]",
+      icon_bg: "bg-[#ECE8F9] group-hover:bg-white",
       title: "enterprise",
       heading: "$50",
       dis_digit: "40",
       feature: [
-        ["Data export & deletion",
-           "Block native integrations",
+        [
+          "Data export & deletion",
+          "Block native integrations",
           "Custom branding",
           "Lock custom fields",
-           "Priority support",],
+          "Priority support",
+        ],
       ],
-      feature_icon: <GiCheckMark />
+      feature_icon: <GiCheckMark />,
     },
   ];
   return (
@@ -74,18 +77,12 @@ function Pricing() {
         <div className="flex justify-between ">
           {pricing_data.map((item) => (
             <div className="border-1 border-border-gray rounded-[20px] px-[60px] py-[40px] flex flex-col text-center group hover:bg-blueBtn-color transition-all duration-500">
-              <div className=" mx-auto">
+              <div className=" mx-auto group">
                 <div
-                  style={{
-                    backgroundColor: item.icon_bg,
-                  }}
-                  className="h-[90px] w-[90px]  rounded-[50%] flex items-center justify-center mb-8 group-hover:bg-white transition-all duration-500"
+                  className={`h-[90px] w-[90px] rounded-full flex items-center justify-center mb-8 transition-all duration-500 ${item.icon_bg}`}
                 >
                   <div
-                    style={{
-                      color: item.icon_color,
-                    }}
-                    className="group-hover:text-blueBtn-color transition-all duration-500 text-[40px]"
+                    className={`text-[40px] transition-all duration-500 ${item.icon_color} group-hover:text-blueBtn-color`}
                   >
                     {item.icon}
                   </div>
@@ -106,10 +103,7 @@ function Pricing() {
               </p>
               <div className="mb-[40px]">
                 {item.feature[0].map((list, index) => (
-                  <div
-                    className="flex items-center mb-[26px]"
-                    key={index}
-                  >
+                  <div className="flex items-center mb-[26px]" key={index}>
                     <div className="flex items-center">
                       <div className="h-[24px] w-[24px] bg-[#F4EBFF] rounded-[50%] flex justify-center items-center text-blueBtn-color text-[12px]">
                         {item.feature_icon}
