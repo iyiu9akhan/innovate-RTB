@@ -87,8 +87,13 @@ function Testimonial() {
               </div>
             </div>
           </div>
-          <div>
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, iste.</h1>
+          <div className="bg-white rounded-[20px] p-[60px]">
+            <p className="font-secondary font-normal text-[22px] leading-[44px] text-info-color mb-[37px] w-[567px]">“Wow. Amazing company amazing Expert Manager. They know how to get things done when it comes to online trading. </p>
+            <div>
+                <div>
+                    <h5 className="font-primary capitalize text-[24px] font-bold leading-[36px] ">robert fox</h5>
+                </div>
+            </div>
           </div>
         </div>
       </Container>
