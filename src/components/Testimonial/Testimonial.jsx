@@ -87,12 +87,40 @@ function Testimonial() {
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-[20px] p-[60px]">
-            <p className="font-secondary font-normal text-[22px] leading-[44px] text-info-color mb-[37px] w-[567px]">“Wow. Amazing company amazing Expert Manager. They know how to get things done when it comes to online trading. </p>
-            <div>
-                <div>
-                    <h5 className="font-primary capitalize text-[24px] font-bold leading-[36px] ">robert fox</h5>
-                </div>
+          <div className="bg-white rounded-[20px] p-[60px] relative mt-[80px]">
+            <p className="font-secondary font-normal text-[22px] leading-[44px] text-info-color mb-[37px] w-[567px]">
+              “Wow. Amazing company amazing Expert Manager. They know how to get
+              things done when it comes to online trading.{" "}
+            </p>
+            <div className="flex justify-between">
+              <div>
+                <h5 className="font-primary capitalize text-[24px] font-bold leading-[36px] text-[#30344E] mb-1">
+                  robert fox
+                </h5>
+                <p className="font-secondary font-normal text-[16px] leading-[26px] text-[#30344E]">
+                  Digital Marketer
+                </p>
+              </div>
+              <div className="flex text-[#FFC34C] gap-1 ml-[18px] items-end">
+                <p>
+                  <FaStar size={18} />
+                </p>
+                <p>
+                  <FaStar size={18} />
+                </p>
+                <p>
+                  <FaStar size={18} />
+                </p>
+                <p>
+                  <FaStar size={18} />
+                </p>
+                <p>
+                  <FaStarHalfAlt size={18} />
+                </p>
+              </div>
+            </div>
+            <div className="h-[124px] w-[124px] outline-10 rounded-[50%] absolute top-[-80px] outline-[#F7F7FC]">
+                <img src={human_three} alt="human_three" className="rounded-[50%]"/>
             </div>
           </div>
         </div>
