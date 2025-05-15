@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "../Layout/container";
 import Button from "../Layout/Button";
-import texture from "../../assets/contact/texture.png";
 
 const Contact = () => {
   return (
