@@ -100,7 +100,7 @@ function Footer() {
                             className="h-[46px] w-[269px] rounded-[6px] border-1 border-[#D2D2D2]  outline-0 pl-[24px] placeholder:text-[16px] capitalize leading-[26px] font-primary text-black"
                             placeholder="Your Email Address"
                           />
-                          <button className="absolute  cursor-pointer h-9 w-9 bg-blueBtn-color rounded-[6px] right-[-21px] top-[5px] flex items-center justify-center">
+                          <button className="absolute  cursor-pointer h-9 w-9 bg-blueBtn-color rounded-[6px] right-[22px] top-[5px] flex items-center justify-center">
                             <FaTelegramPlane size={15} color="white"/>
                           </button>
                         </div>
