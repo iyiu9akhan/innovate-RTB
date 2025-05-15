@@ -1,7 +1,13 @@
 import React from "react";
 import Container from "../Layout/container";
 import footer_logo from "../../assets/footer/footer-logo.png";
-import { FaGoogle, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+  FaGoogle,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaTelegramPlane,
+} from "react-icons/fa";
 
 function Footer() {
   const social_media = [
@@ -43,15 +49,17 @@ function Footer() {
     },
     {
       heading: "get latest updates",
-      menu_item: ["Subscribe to our newsletter and get many interesting things every week"],
-      different: true
+      menu_item: [
+        "Subscribe to our newsletter and get many interesting things every week",
+      ],
+      different: true,
     },
   ];
   return (
     <div className="bg-[#F7F7FC] pt-[291px]">
       <Container>
         <div className="pb-[86px] flex justify-between">
-          <div >
+          <div>
             <img
               src={footer_logo}
               alt="footer_logo"
@@ -81,19 +89,31 @@ function Footer() {
                 </h6>
                 {menu.menu_item && (
                   <div className="">
-                    {menu.different?(
+                    {menu.different ? (
+                      <div>
                         <p className="font-secondary font-normal text-[16px]  leading-[26px] text-info-color capitalize mb-[32px] w-[285px]">
-                        {menu.menu_item[0]}
-                      </p>
-                    ):(
-                        menu.menu_item.map((item, index) => (
-                      <p
-                        key={index}
-                        className="cursor-pointer font-secondary font-normal text-[16px]  leading-[26px] text-info-color capitalize mb-3 hover:text-blueBtn-color transition-colors  duration-300"
-                      >
-                        {item}
-                      </p>
-                    ))
+                          {menu.menu_item}
+                        </p>
+                        <div className="relative ">
+                          <input
+                            type="text"
+                            className="h-[46px] w-[269px] rounded-[6px] border-1 border-[#D2D2D2]  outline-0 pl-[24px] placeholder:text-[16px] capitalize leading-[26px] font-primary text-black"
+                            placeholder="Your Email Address"
+                          />
+                          <button className="absolute  cursor-pointer h-9 w-9 bg-blueBtn-color rounded-[6px] right-[-21px] top-[5px] flex items-center justify-center">
+                            <FaTelegramPlane size={15} color="white"/>
+                          </button>
+                        </div>
+                      </div>
+                    ) : (
+                      menu.menu_item.map((item, index) => (
+                        <p
+                          key={index}
+                          className="cursor-pointer font-secondary font-normal text-[16px]  leading-[26px] text-info-color capitalize mb-3 hover:text-blueBtn-color transition-colors  duration-300"
+                        >
+                          {item}
+                        </p>
+                      ))
                     )}
                   </div>
                 )}
@@ -101,6 +121,10 @@ function Footer() {
             ))}
           </div>
         </div>
+        <div className="h-1 bg-[#d2d2d2] w-full rounded-full opacity-[20%]"></div>
+        <p className="mt-[24px] mb-[30px] font-secondary font-normal text-[14px] leading-5 text-info-color">
+          © 2024 Innovate - All Right Reserved
+        </p>
       </Container>
     </div>
   );
