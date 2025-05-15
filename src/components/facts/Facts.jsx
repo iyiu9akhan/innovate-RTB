@@ -1,6 +1,5 @@
 import React from 'react'
 import Container from '../Layout/container'
-// import texture from '../facts/texture.png'
 import illustration from '../../assets/facts/illustration.png'
 
 function Facts() {
@@ -23,7 +22,7 @@ function Facts() {
   return (
     <div className='mb-[140px]'>
         <Container>
-            <div className="rounded-[40px] bg-blueBtn-color bg-[url('/src/assets/facts/texture.png')] bg-no-repeat flex  ">
+            <div className="rounded-[40px] bg-blueBtn-color bg-[url('/src/assets/facts/texture.png')] bg-no-repeat bg-cover flex">
                 <div className='mt-[44px] ml-[41px] mr-[45px] content-end'>
                     <img src={illustration} alt="#illustration" />
                 </div>
