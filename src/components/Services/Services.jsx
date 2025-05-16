@@ -5,6 +5,7 @@ import services_two from "../../assets/services/services_two.png";
 import services_three from "../../assets/services/services_three.png";
 import services_four from "../../assets/services/services_four.png";
 import Button from "../Layout/Button";
+import { IoMdArrowRoundForward } from "react-icons/io";
 
 function Services() {
   const services_data = [
@@ -54,12 +55,13 @@ function Services() {
               <img src={item.img} alt="#features_one" className="mb-[26px] "/>
               <h5 className="mb-2 font-primary font-bold text-[22px] leading-6 text-blue-color group-hover:text-white transition-all duration-500">{item.title}</h5>
               <p className="font-secondary text-4 leading-[26px] tracking-[-0.04px] w-[258px] mb-[26px] text-info-color group-hover:text-white transition-all duration-500">{item.details}</p>
-              <button className="cursor-pointer text-[#3639A4] font-secondary text-4 font-medium leading-[26px] group-hover:text-white transition-all duration-500">{item.button}</button>
+              <button className="cursor-pointer text-[#3639A4] font-secondary text-4 font-medium leading-[26px] group-hover:text-white transition-all duration-500 flex gap-2 items-center">{item.button}<IoMdArrowRoundForward />
+</button>
             </div>
           ))}
         </div>
           <div className="text-center">
-            <Button>view more</Button>
+            <Button>view more </Button>
           </div>
       </Container>
     </div>
