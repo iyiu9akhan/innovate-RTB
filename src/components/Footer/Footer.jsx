@@ -122,7 +122,7 @@ function Footer() {
           </div>
         </div>
         <div className="h-1 bg-[#d2d2d2] w-full rounded-full opacity-[20%]"></div>
-        <p className="mt-[24px] mb-[30px] font-secondary font-normal text-[14px] leading-5 text-info-color">
+        <p className="pt-[24px] pb-[30px] font-secondary font-normal text-[14px] leading-5 text-info-color">
           © 2024 Innovate - All Right Reserved
         </p>
       </Container>
