@@ -9,14 +9,65 @@ import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
+// import { IoMdArrowDropright } from "react-icons/io";
 
+function SampleNextArrow(props) {
+  var { style, onClick } = props;
+  return (
+    <div
+      className="group cursor-pointer absolute -right-0 -bottom-12 "
+      style={{
+        ...style,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "#3639A4",
+        height: "30px",
+        width: "30px",
+        borderRadius: "50%",
+      }}
+      onClick={onClick}
+    >
+      <IoMdArrowDropright
+        color="#fff"
+        size={22}
+        className="group-hover:#fff "
+      />
+    </div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  var { style, onClick } = props;
+  return (
+    <div
+      className="group cursor-pointer absolute right-12 -bottom-12 "
+      style={{
+        ...style,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "#3639A4",
+        height: "30px",
+        width: "30px",
+        borderRadius: "50%",
+      }}
+      onClick={onClick}
+    >
+      <IoMdArrowDropleft color="#fff" size={22}/>
+    </div>
+  );
+}
 function Testimonial() {
   const slider = {
-    // dots: true,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 3000,
-    arrows: false,
+    arrows: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
   };
 
   const slider_info = [
@@ -39,7 +90,7 @@ function Testimonial() {
     {
       img: human_three,
       review:
-        "Absolutely life-changing experience! My portfolio grew 30% in just 3 months thanks to their expert advice.",
+        "Excellent service and support! The team helped me navigate the complexities of trading with ease. Highly recommended!",
       name: "emily rodriguez",
       title: "freelance designer",
       rating: 3,
@@ -57,7 +108,7 @@ function Testimonial() {
   return (
     <div className="bg-[#F4FAFA] py-[200px]">
       <Container>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between">
           <div>
             <h3 className="font-primary font-bold text-[46px] leading-[58px] text-blue-color w-[594px] mb-[20px]">
               What they are talking about us?
@@ -133,7 +184,7 @@ function Testimonial() {
             </div>
           </div>
 
-          <div className="w-[687px]">
+          <div className="w-[687px] ">
             <Slider {...slider}>
               {slider_info.map((item, index) => (
                 <div
@@ -156,9 +207,9 @@ function Testimonial() {
                       {[...Array(5)].map((unused, index) => (
                         <span key={index}>
                           {index < item.rating ? (
-                            <FaStar color="#ffc107" size={18}/>
+                            <FaStar color="#ffc107" size={18} />
                           ) : (
-                            <FaStar color="#ddd" size={18}/>
+                            <FaStar color="#ddd" size={18} />
                           )}
                         </span>
                       ))}
