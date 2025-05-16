@@ -215,7 +215,7 @@ function Testimonial() {
                       ))}
                     </div>
                   </div>
-                  <div className="h-[124px] w-[124px] outline-10 rounded-[50%] absolute top-[-80px] outline-[#F7F7FC]">
+                  <div className="h-[124px] w-[124px] outline-10 rounded-[50%] absolute top-[-80px]  outline-[#F7F7FC]">
                     <img
                       src={item.img}
                       alt="human_one"
