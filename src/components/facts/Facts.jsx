@@ -35,7 +35,6 @@ function Facts() {
                 <div className="">
                   <div className="flex gap-2 items-center">
                         <h4 className="font-primary font-black text-[44px] leading-[54px] text-white mb-3">
-                      {/* {item.digit} */}
                       <CountUp
                         start={0}
                         end={item.digit}
