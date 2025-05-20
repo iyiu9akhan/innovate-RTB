@@ -25,7 +25,7 @@ function Banner({ children }) {
               try for free
             </button>
           </div>
-          <img src={laptop_screen} alt="laptop_screen" className="mx-auto" />
+          <img src={laptop_screen} alt="laptop_screen" className="mx-auto"/>
         </div>
       </Container>
     </div>

@@ -6,14 +6,14 @@ function Navbar() {
   return (
     <div className="pt-8 absolute top-0 left-0 w-full z-10">
       <Container>
-        <div className="flex justify-between items-center">
-          <div>
-            <a href="#">
+        <div className="flex flex-col items-start md:flex-row md:justify-between md:items-center">
+          <div className="mb-5 md:mb-0">
+            <a href="#" >
               <img src={logo} alt="main_logo" />
             </a>
           </div>
           <div>
-            <ul className="flex gap-x-[50px] capitalize font-secondary text-lg font-medium text-white items-center">
+            <ul className="md:flex gap-x-[50px] capitalize font-secondary text-lg font-medium text-white items-center">
               <li>
                 <a href="#">home</a>
               </li>
