@@ -8,6 +8,7 @@ import { RiFunctionAddFill } from "react-icons/ri";
 import { MdWebStories } from "react-icons/md";
 import { FaPager } from "react-icons/fa6";
 import { FaBlogger } from "react-icons/fa6";
+import { RxCross2 } from "react-icons/rx";
 
 
 function Navbar() {
@@ -27,10 +28,17 @@ function Navbar() {
               <img src={logo} alt="main_logo" />
             </a>
             <div className="block md:hidden">
-              <HiMenuAlt1
-                className="text-white size-[25px] cursor-pointer"
-                onClick={click}
-              />
+              {show ? (
+                <RxCross2 
+                  className="text-white size-[25px] cursor-pointer"
+                  onClick={click}
+                />
+              ) : (
+                <HiMenuAlt1
+                  className="text-white size-[25px] cursor-pointer"
+                  onClick={click}
+                />
+              )}
             </div>
           </div>
           <div>
@@ -65,7 +73,7 @@ function Navbar() {
         </div>
       </Container>
       {show && (
-        <div className="flex flex-col  md:flex-row md:justify-between md:items-center  absolute top-0 w-[85%] h-screen z-[999] px-[15px] bg-white">
+        <div className="flex flex-col  md:flex-row md:justify-between md:items-center  absolute top-0 w-[85%] h-screen z-[999] px-[15px] bg-white rounded-r-[12px] ">
           <div className="mb-[32px]">
             <div className="pt-[32px] pb-[32px]">
               <a href="#">
@@ -110,7 +118,7 @@ function Navbar() {
             </button>
           </div>
         </div>
-      )}
+      ) }
     </div>
   );
 }
