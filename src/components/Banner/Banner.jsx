@@ -4,7 +4,7 @@ import laptop_screen from "../../assets/laptop_screen.png";
 
 function Banner({ children }) {
   return (
-    <div className="bg-[url('/src/assets/bg_shape.png')] bg-no-repeat  relative w-full pt-[92px] mb-[160px]">
+    <div className="bg-[url('/src/assets/bg_shape.png')] bg-no-repeat  relative w-full  mb-[160px]">
       {children}
       <Container>
         <div className="text-center">
