@@ -39,7 +39,7 @@ function Facts() {
                         start={0}
                         end={item.digit}
                         delay={0}
-                        duration={10}
+                        duration={5}
                         decimals={item.digit % 1 !== 0 ? 1 : 0}
                       >
                         {({ countUpRef }) => (
