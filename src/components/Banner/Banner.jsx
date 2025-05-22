@@ -8,10 +8,10 @@ function Banner({ children }) {
       {children}
       <Container>
         <div className="text-center">
-          <h1 className="font-secondary font-bold text-[56px] w-[786px] mx-auto text-white mt-[98px] mb-[20px] leading-[64px]">
+          <h1 className=" font-secondary font-bold text-[30px] mt-[40px] leading-[55px] mb-[12px] md:text-[56px] md:w-[786px] mx-auto text-white md:mt-[98px] md:mb-[20px] md:leading-[64px]">
             Get your work done with Management Tool
           </h1>
-          <p className="font-secondary font-normal text-lg tracking-[-0.0025em] text-white leading-8 w-[467px] mx-auto mb-8">
+          <p className="font-secondary font-normal text-[15px] w-auto md:text-lg tracking-[-0.0025em] text-white leading-8 md:w-[467px] mx-auto mb-8">
             The world's first project management platform that connects
             everything
           </p>

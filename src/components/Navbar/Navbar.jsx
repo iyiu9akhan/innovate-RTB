@@ -73,14 +73,15 @@ function Navbar() {
         </div>
       </Container>
       {show && (
-        <div className="flex flex-col  md:flex-row md:justify-between md:items-center  absolute top-0 w-[85%] h-screen z-[999] px-[15px] bg-white rounded-r-[12px] ">
+        <div className="flex flex-col  md:flex-row md:justify-between md:items-center  absolute top-0 w-[85%] h-screen z-[999] px-[15px] bg-white rounded-r-[12px] justify-between">
           <div className="mb-[32px]">
-            <div className="pt-[32px] pb-[32px]">
+            <div className="pt-[32px] pb-[32px] ">
               <a href="#">
                 <img src={menu_logo} alt="main_logo" />
               </a>
             </div>
-            <ul className="flex-col flex  capitalize font-secondary text-[20px] font-medium text-black gap-y-8">
+            <hr className="text-blueBtn-color"/>
+            <ul className="flex-col flex capitalize font-secondary text-[20px] font-medium text-black gap-y-8 mt-5">
               <li>
                 <a href="#" className="flex items-center gap-6">
                   <GoHomeFill color="#C4C4C4" size={30}/>
@@ -109,11 +110,11 @@ function Navbar() {
               </li>
             </ul>
           </div>
-          <div className=" text-black font-secondary font-medium text-lg gap-9 flex items-center ">
-            <button className="leading-[200%] cursor-pointer capitalize">
+          <div className=" text-black font-secondary font-medium text-[15px] gap-9 flex justify-center items-end pb-[32px]">
+            <button className="leading-[20px] cursor-pointer capitalize border-1 border-blueBtn-color rounded-[6px] py-4 px-10">
               login
             </button>
-            <button className="leading-[20px] py-5 px-12 bg-btn rounded-[6px] cursor-pointer text-black capitalize">
+            <button className="leading-[20px] py-4 px-10 bg-btn rounded-[6px] cursor-pointer text-black capitalize">
               register
             </button>
           </div>
