@@ -67,14 +67,14 @@ function Pricing() {
     <div className="mb-[160px]">
       <Container>
         <div>
-          <h1 className="font-primary font-bold text-[46px] leading-[56px] text-blue-color w-[623px] mb-[39px] capitalize mx-auto text-center">
+          <h1 className="font-primary font-bold text-[37px] md:text-[46px] leading-[56px] text-blue-color md:w-[623px] mb-[39px] capitalize mx-auto text-center">
             pricing designed to fit your business
           </h1>
           <h6 className="text-center mb-[77px] capitalize font-primary font-bold text-[24px] text-blueBtn-color">
             monthly
           </h6>
         </div>
-        <div className="flex justify-between ">
+        <div className="md:flex justify-between ">
           {pricing_data.map((item) => (
             <div className="border-1 border-border-gray rounded-[20px] px-[60px] py-[40px] flex flex-col text-center group hover:bg-blueBtn-color transition-all duration-500">
               <div className=" mx-auto group">
