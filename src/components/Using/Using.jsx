@@ -26,7 +26,7 @@ function Using() {
     },
   ];
   return (
-    <div className="mb-[160px]">
+    <div className="md:mb-[160px]">
       <Container>
         <div className="md:px-[58px]">
           <div className="md:flex justify-between mb-[50px] md:mb-[116px]">
@@ -41,15 +41,15 @@ function Using() {
           <div className="md:flex justify-between text-center">
             {infoData.map((item) => (
               <div>
-                <div className="flex md:flex-col gap-[26px] md:gap-0">
+                <div className="flex md:flex-col gap-[26px] md:gap-0 ">
                   <img
-                  src={item.img}
-                  alt="#icon_one"
-                  className="mx-auto mb-[12px] md:mb-[26px] h-[65px] w-[65px] md:h-[110px] md:w-[110px]"
-                />
-                <h4 className="flex items-center text-[20px] text-start md:text-center font-primary font-medium md:font-bold md:text-[24px] md:leading-9 text-blue-color  w-[300px] mx-auto mb-[12px] ">
-                  {item.title}
-                </h4>
+                    src={item.img}
+                    alt="#icon_one"
+                    className="md:mx-auto mb-[12px] md:mb-[26px] h-[65px] w-[65px] md:h-[110px] md:w-[110px]"
+                  />
+                  <h4 className="flex items-center text-[20px] text-start md:text-center font-primary font-medium md:font-bold md:text-[24px] md:leading-9 text-blue-color md:w-[300px] md:mx-auto mb-[12px] ">
+                    {item.title}
+                  </h4>
                 </div>
                 <p className="text-justify md:text-center md:w-[300px] font-secondary md:text-lg md:leading-8 text-info-color mx-auto mb-[50px] md:mb-0">
                   {item.details}
