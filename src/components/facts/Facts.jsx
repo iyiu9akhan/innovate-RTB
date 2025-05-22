@@ -22,15 +22,16 @@ function Facts() {
   return (
     <div className="mb-[140px]">
       <Container>
-        <div className="rounded-[20px] md:rounded-[40px] bg-blueBtn-color bg-[url('/src/assets/facts/texture.png')] bg-no-repeat bg-cover md:flex">
+        <div className="flex flex-col-reverse rounded-[20px] pt-[30px] md:rounded-[40px] bg-blueBtn-color bg-[url('/src/assets/facts/texture.png')] bg-no-repeat bg-cover md:flex">
           <div className="mt-[44px] ml-[41px] mr-[45px] content-end">
             <img src={illustration} alt="#illustration" />
           </div>
           <div className="md:mr-[70px] md:mt-[85px]">
-            <h4 className="font-primary font-bold text-[44px] text-white mb-[64px] md:w-[554px] text-center">
-              Trusted by 35,000+ happy customers.
+            <h4 className="font-primary font-bold text-[44px] text-white mb-[45px] md:mb-[64px] md:w-[554px] text-center">
+              {/* Trusted by 35,000+ happy customers. */}
+              eto rag kora valo na , pakhi !
             </h4>
-            <div className="flex flex-col items-center md:flex justify-between mb-[85px] md:w-[608px]">
+            <div className="flex flex-col items-center md:flex justify-between md:mb-[85px] md:w-[608px]">
               {facts_data.map((item) => (
                 <div className="flex flex-col items-center">
                   <div className="flex gap-2 items-center">
