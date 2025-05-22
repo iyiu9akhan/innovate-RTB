@@ -45,24 +45,30 @@ function Services() {
           <h6 className="font-secondary font-medium text-[20px] text-[#FF7364] capitalize  mb-1">
             our services
           </h6>
-          <h4 className="font-primary font-bold text-[46px] leading-[58px] mb-[80px] text-blue-color capitalize">
+          <h4 className="font-primary font-bold text-[46px] leading-[58px] mb-[45px] md:mb-[80px] text-blue-color capitalize">
             how it works
           </h4>
         </div>
-        <div className="flex justify-between mb-20 ">
+        <div className="flex flex-col items-center md:flex md:flex-row md:justify-between mb-20">
           {services_data.map((item) => (
-            <div className=" border-1 border-[#DCE7FE] rounded-[20px] p-9 hover:bg-blueBtn-color group transition-all duration-500">
-              <img src={item.img} alt="#features_one" className="mb-[26px] "/>
-              <h5 className="mb-2 font-primary font-bold text-[22px] leading-6 text-blue-color group-hover:text-white transition-all duration-500">{item.title}</h5>
-              <p className="font-secondary text-4 leading-[26px] tracking-[-0.04px] w-[258px] mb-[26px] text-info-color group-hover:text-white transition-all duration-500">{item.details}</p>
-              <button className="cursor-pointer text-[#3639A4] font-secondary text-4 font-medium leading-[26px] group-hover:text-white transition-all duration-500 flex gap-2 items-center">{item.button}<IoMdArrowRoundForward />
-</button>
+            <div className=" table border-1 border-[#DCE7FE] rounded-[20px] p-9 hover:bg-blueBtn-color group transition-all duration-500 mb-[30px] md:mb-0 ">
+              <img src={item.img} alt="#features_one" className="mb-[26px]" />
+              <h5 className="mb-2 font-primary font-bold text-[22px] leading-6 text-blue-color group-hover:text-white transition-all duration-500">
+                {item.title}
+              </h5>
+              <p className="font-secondary text-4 leading-[26px] tracking-[-0.04px] w-[258px] mb-[26px] text-info-color group-hover:text-white transition-all duration-500">
+                {item.details}
+              </p>
+              <button className="cursor-pointer text-[#3639A4] font-secondary text-4 font-medium leading-[26px] group-hover:text-white transition-all duration-500 flex gap-2 items-center">
+                {item.button}
+                <IoMdArrowRoundForward />
+              </button>
             </div>
           ))}
         </div>
-          <div className="text-center">
-            <Button>view more </Button>
-          </div>
+        <div className="text-center">
+          <Button>view more </Button>
+        </div>
       </Container>
     </div>
   );

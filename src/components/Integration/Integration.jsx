@@ -14,7 +14,7 @@ import integration_shape from "../../assets/integration/integration_shape.png";
 
 function Integration() {
   return (
-    <div className="bg-sectionBG-color md:pt-[124px] relative mb-[140px]">
+    <div className="bg-sectionBG-color md:pt-[124px] relative md:mb-[140px]">
       <img
         src={integration_shape}
         alt="#integration_shape"
@@ -41,7 +41,7 @@ function Integration() {
               </Button>
             </div>
           </div>
-          <div className="mb-[120px] pb-[50px] md:pb-0">
+          <div className="mb-[55px] md:mb-[120px] pb-[50px] md:pb-0">
             <div className="flex justify-center md:justify-between gap-x-[20px] mb-[20px] md:gap-x-[30px] md:mb-[35px]">
               <Brand_logo className="w-[332px]">
                 <img src={brand_one} alt="#brand_one" className="px-[12px] md:px-0"/>
