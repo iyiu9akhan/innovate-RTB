@@ -22,19 +22,19 @@ function Facts() {
   return (
     <div className="mb-[140px]">
       <Container>
-        <div className="rounded-[40px] bg-blueBtn-color bg-[url('/src/assets/facts/texture.png')] bg-no-repeat bg-cover flex">
+        <div className="rounded-[20px] md:rounded-[40px] bg-blueBtn-color bg-[url('/src/assets/facts/texture.png')] bg-no-repeat bg-cover md:flex">
           <div className="mt-[44px] ml-[41px] mr-[45px] content-end">
             <img src={illustration} alt="#illustration" />
           </div>
-          <div className="mr-[70px] mt-[85px]">
-            <h4 className="font-primary font-bold text-[44px] text-white mb-[64px] w-[554px]">
+          <div className="md:mr-[70px] md:mt-[85px]">
+            <h4 className="font-primary font-bold text-[44px] text-white mb-[64px] md:w-[554px] text-center">
               Trusted by 35,000+ happy customers.
             </h4>
-            <div className="flex justify-between mb-[85px] w-[608px]">
+            <div className="flex flex-col items-center md:flex justify-between mb-[85px] md:w-[608px]">
               {facts_data.map((item) => (
-                <div className="">
+                <div className="flex flex-col items-center">
                   <div className="flex gap-2 items-center">
-                        <h4 className="font-primary font-black text-[44px] leading-[54px] text-white mb-3">
+                    <h4 className="font-primary font-black text-[44px] leading-[54px] text-white mb-3">
                       <CountUp
                         start={0}
                         end={item.digit}
@@ -53,7 +53,7 @@ function Facts() {
                       {item.digit === 720 || item.digit === 200 ? "+" : " "}
                     </div>
                   </div>
-                  <p className="font-secondary font-medium text-lg leading-8 text-white w-[176px]">
+                  <p className="font-secondary font-medium text-lg leading-8 text-white md:w-[176px]">
                     {item.info}
                   </p>
                 </div>
