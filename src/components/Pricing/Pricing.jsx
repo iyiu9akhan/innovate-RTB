@@ -5,6 +5,10 @@ import { GiCheckMark } from "react-icons/gi";
 import Button from "../Layout/Button";
 import { HiOutlineUserGroup } from "react-icons/hi2";
 import { PiBuildingOffice } from "react-icons/pi";
+// import Slider from "../Layout/slider";
+// import Slider from "react-slick";
+// import Slider from "react-slick";
+// import Slider from "react-slick";
 
 function Pricing() {
   const pricing_data = [
@@ -116,12 +120,13 @@ function Pricing() {
                   </div>
                 ))}
               </div>
-              <Button className="w-full md:w-[330px] transition-all duration-500 group-hover:text-black group-hover:bg-btn group-hover:border-btn hover:bg-white hover:border-white">
+              <Button className="w-full  md:min-w-[330px] transition-all duration-500 group-hover:text-black group-hover:bg-btn group-hover:border-btn hover:bg-white hover:border-white">
                 Purchase Now
               </Button>
             </div>
           ))}
         </div>
+          {/* <Slider></Slider> */}
       </Container>
     </div>
   );
