@@ -64,19 +64,19 @@ function Pricing() {
     },
   ];
   return (
-    <div className="mb-[160px]">
+    <div className="mb-[60px] md:mb-[160px]">
       <Container>
         <div>
           <h1 className="font-primary font-bold text-[37px] md:text-[46px] leading-[56px] text-blue-color md:w-[623px] mb-[39px] capitalize mx-auto text-center">
             pricing designed to fit your business
           </h1>
-          <h6 className="text-center mb-[77px] capitalize font-primary font-bold text-[24px] text-blueBtn-color">
+          <h6 className="text-center mb-[30px] md:mb-[77px] capitalize font-primary font-bold text-[24px] text-blueBtn-color">
             monthly
           </h6>
         </div>
-        <div className="md:flex justify-between ">
+        <div className=" md:flex justify-between ">
           {pricing_data.map((item) => (
-            <div className="border-1 border-border-gray rounded-[20px] px-[60px] py-[40px] flex flex-col text-center group hover:bg-blueBtn-color transition-all duration-500">
+            <div className="mb-[35px] border-1 border-border-gray rounded-[20px] px-[60px] py-[40px] flex flex-col text-center group hover:bg-blueBtn-color transition-all duration-500">
               <div className=" mx-auto group">
                 <div
                   className={`h-[90px] w-[90px] rounded-full flex items-center justify-center mb-8 transition-all duration-500 ${item.icon_bg}`}
@@ -94,7 +94,7 @@ function Pricing() {
               <h2 className="font-primary font-bold text-[44px] leading-[54px] tracking-[-0.88px] mb-[14px] text-blue-color group-hover:text-white transition-all duration-500">
                 {item.heading}/mth
               </h2>
-              <p className="font-secondary font-medium text-lg leading-[18px] mb-[40px] group-hover:text-white transition-all duration-500">
+              <p className="font-secondary font-medium text-lg md:leading-[18px] mb-[40px] group-hover:text-white transition-all duration-500">
                 Annual pricing
                 <span className="text-blueBtn-color mb-[40px] transition-all duration-500 group-hover:text-btn">
                   {" "}
@@ -108,7 +108,7 @@ function Pricing() {
                       <div className="h-[24px] w-[24px] bg-[#F4EBFF] rounded-[50%] flex justify-center items-center text-blueBtn-color text-[12px]">
                         {item.feature_icon}
                       </div>
-                      <p className="ml-[22px] font-secondary font-medium text-lg leading-[32px] text-info-color transition-all duration-500 group-hover:text-white ">
+                      <p className="text-start ml-[22px] font-secondary font-medium text-lg md:leading-[32px] text-info-color transition-all duration-500 group-hover:text-white ">
                         {" "}
                         {list}
                       </p>
@@ -116,7 +116,7 @@ function Pricing() {
                   </div>
                 ))}
               </div>
-              <Button className="w-[330px] transition-all duration-500 group-hover:text-black group-hover:bg-btn group-hover:border-btn hover:bg-white hover:border-white">
+              <Button className="w-full md:w-[330px] transition-all duration-500 group-hover:text-black group-hover:bg-btn group-hover:border-btn hover:bg-white hover:border-white">
                 Purchase Now
               </Button>
             </div>
