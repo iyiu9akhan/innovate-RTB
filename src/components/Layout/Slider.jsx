@@ -1,130 +1,116 @@
-import React from "react";
+import React, { useEffect } from 'react';
+import { initFlowbite } from 'flowbite';
+import { FaStar } from "react-icons/fa";
 
-function Slider() {
+function Slider({ slides }) {
+  useEffect(() => {
+    initFlowbite(); // Initialize Flowbite carousel
+  }, []);
+
   return (
-    <>
-      <div
-        id="default-carousel"
-        className="relative w-full"
-        data-carousel="slide"
-      >
-        <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            {items.map((item, index) => (
-              <div
-                key={index}
-                className={`transition-opacity duration-700 ease-in-out ${
-                  index === currentIndex ? "opacity-100" : "opacity-0 absolute"
-                }`}
-              >
-                {item}
+    <div id="testimonial-carousel" className="relative w-full" data-carousel="slide">
+      {/* Carousel wrapper */}
+      <div className="relative h-[500px] overflow-hidden rounded-lg">
+        {/* Map through slides */}
+        {slides.map((slide, index) => (
+          <div 
+            key={index} 
+            className={`duration-700 ease-in-out ${index === 0 ? '' : 'hidden'}`} 
+            data-carousel-item
+          >
+            <div className="bg-white rounded-[20px] p-[60px] relative">
+              <p className="font-secondary font-normal text-[22px] leading-[44px] text-info-color mb-[37px]">
+                {slide.review}
+              </p>
+              <div className="flex justify-between">
+                <div>
+                  <h5 className="font-primary capitalize text-[24px] font-bold leading-[36px] text-[#30344E] mb-1">
+                    {slide.name}
+                  </h5>
+                  <p className="font-secondary font-normal text-[16px] leading-[26px] text-[#30344E] capitalize">
+                    {slide.title}
+                  </p>
+                </div>
+                <div className="flex items-end gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i}>
+                      {i < slide.rating ? (
+                        <FaStar color="#ffc107" size={18} />
+                      ) : (
+                        <FaStar color="#ddd" size={18} />
+                      )}
+                    </span>
+                  ))}
+                </div>
               </div>
-            ))}
+              <div className="h-[124px] w-[124px] rounded-[50%] absolute top-[-80px] outline outline-[#F7F7FC]">
+                <img src={slide.img} alt={slide.name} className="rounded-[50%]" />
+              </div>
+            </div>
           </div>
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            {/* <img src="/docs/images/carousel/carousel-2.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> */}
-            <h1>Lorem ipsum dolor sit amet.</h1>
-          </div>
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            {/* <img src="/docs/images/carousel/carousel-3.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> */}
-            <h1>Lorem ipsum dolor sit amet.</h1>
-          </div>
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            {/* <img src="/docs/images/carousel/carousel-4.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> */}
-            <h1>Lorem ipsum dolor sit amet.</h1>
-          </div>
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            {/* <img src="/docs/images/carousel/carousel-5.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> */}
-            <h1>Lorem ipsum dolor sit amet.</h1>
-          </div>
-        </div>
-        <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-          <button
-            type="button"
-            className="w-3 h-3 rounded-full"
-            aria-current="true"
-            aria-label="Slide 1"
-            data-carousel-slide-to="0"
-          ></button>
-          <button
-            type="button"
-            className="w-3 h-3 rounded-full"
-            aria-current="false"
-            aria-label="Slide 2"
-            data-carousel-slide-to="1"
-          ></button>
-          <button
-            type="button"
-            className="w-3 h-3 rounded-full"
-            aria-current="false"
-            aria-label="Slide 3"
-            data-carousel-slide-to="2"
-          ></button>
-          <button
-            type="button"
-            className="w-3 h-3 rounded-full"
-            aria-current="false"
-            aria-label="Slide 4"
-            data-carousel-slide-to="3"
-          ></button>
-          <button
-            type="button"
-            className="w-3 h-3 rounded-full"
-            aria-current="false"
-            aria-label="Slide 5"
-            data-carousel-slide-to="4"
-          ></button>
-        </div>
-        <button
-          type="button"
-          className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-prev
-        >
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none ">
-            <svg
-              className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180 bg-blueBtn-color"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M5 1 1 5l4 4"
-              />
-            </svg>
-            <span className="sr-only">Previous</span>
-          </span>
-        </button>
-        <button
-          type="button"
-          className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-          data-carousel-next
-        >
-          <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg
-              className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180 bg-blueBtn-color"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 6 10"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="m1 9 4-4-4-4"
-              />
-            </svg>
-            <span className="sr-only">Next</span>
-          </span>
-        </button>
+        ))}
       </div>
-    </>
+
+      {/* Slider indicators */}
+      <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            className="w-3 h-3 rounded-full bg-gray-300 hover:bg-blueBtn-color"
+            aria-current={index === 0}
+            aria-label={`Slide ${index + 1}`}
+            data-carousel-slide-to={index}
+          ></button>
+        ))}
+      </div>
+
+      {/* Slider controls */}
+      <button
+        type="button"
+        className="absolute top-1/2 start-0 z-30 flex items-center justify-center h-10 w-10 -translate-y-1/2 rounded-full bg-blueBtn-color hover:bg-blue-800 text-white"
+        data-carousel-prev
+      >
+        <svg
+          className="w-4 h-4"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M5 1 1 5l4 4"
+          />
+        </svg>
+        <span className="sr-only">Previous</span>
+      </button>
+      <button
+        type="button"
+        className="absolute top-1/2 end-0 z-30 flex items-center justify-center h-10 w-10 -translate-y-1/2 rounded-full bg-blueBtn-color hover:bg-blue-800 text-white"
+        data-carousel-next
+      >
+        <svg
+          className="w-4 h-4"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 6 10"
+        >
+          <path
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="m1 9 4-4-4-4"
+          />
+        </svg>
+        <span className="sr-only">Next</span>
+      </button>
+    </div>
   );
 }
 

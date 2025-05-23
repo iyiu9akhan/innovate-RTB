@@ -186,48 +186,9 @@ function Testimonial() {
           </div>
 
     
-           <div className="w-[687px] ">
-            <Slider {...slider}>
-              {slider_info.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-[20px] p-[60px] relative mt-[80px]"
-                >
-                  <p className="font-secondary font-normal text-[22px] leading-[44px] text-info-color mb-[37px] w-[567px]">
-                    {item.review}
-                  </p>
-                  <div className="flex justify-between">
-                    <div>
-                      <h5 className="font-primary capitalize text-[24px] font-bold leading-[36px] text-[#30344E] mb-1">
-                        {item.name}
-                      </h5>
-                      <p className="font-secondary font-normal text-[16px] leading-[26px] text-[#30344E] capitalize">
-                        {item.title}
-                      </p>
-                    </div>
-                    <div className="flex items-end gap-1">
-                      {[...Array(5)].map((unused, index) => (
-                        <span key={index}>
-                          {index < item.rating ? (
-                            <FaStar color="#ffc107" size={18} />
-                          ) : (
-                            <FaStar color="#ddd" size={18} />
-                          )}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="h-[124px] w-[124px] outline-10 rounded-[50%] absolute top-[-80px]  outline-[#F7F7FC]">
-                    <img
-                      src={item.img}
-                      alt="human_one"
-                      className="rounded-[50%]"
-                    />
-                  </div>
-                </div>
-              ))}
-            </Slider>
-          </div>
+          <div className="w-[687px]">
+  <Slider slides={slider_info} />
+</div>
         </div>
       </Container>
     </div>
