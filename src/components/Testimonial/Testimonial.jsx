@@ -43,7 +43,7 @@ function SamplePrevArrow(props) {
   var { style, onClick } = props;
   return (
     <div
-      className="group cursor-pointer absolute left-[35%] md:right-12 -bottom-12 "
+      className="group cursor-pointer absolute left-[35%] md:left-[85%] md:right-12 -bottom-12 "
       style={{
         ...style,
         display: "flex",
