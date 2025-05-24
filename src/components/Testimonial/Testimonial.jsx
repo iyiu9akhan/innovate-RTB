@@ -7,18 +7,17 @@ import human_three from "../../assets/testimonial/human_three.png";
 import human_four from "../../assets/testimonial/human_four.png";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalfAlt } from "react-icons/fa";
-// import Slider from "react-slick";
-import Slider from "../Layout/slider";
+import Slider from "react-slick";
+// import Slider from "../Layout/slider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
-
 
 function SampleNextArrow(props) {
   var { style, onClick } = props;
   return (
     <div
-      className="group cursor-pointer absolute -right-0 -bottom-12 "
+      className="group cursor-pointer absolute right-[35%]  md:-right-0 -bottom-12 "
       style={{
         ...style,
         display: "flex",
@@ -44,7 +43,7 @@ function SamplePrevArrow(props) {
   var { style, onClick } = props;
   return (
     <div
-      className="group cursor-pointer absolute right-12 -bottom-12 "
+      className="group cursor-pointer absolute left-[35%] md:right-12 -bottom-12 "
       style={{
         ...style,
         display: "flex",
@@ -185,10 +184,48 @@ function Testimonial() {
             </div>
           </div>
 
-    
-          <div className="w-[687px]">
-  <Slider slides={slider_info} />
-</div>
+          <div className="my-[50px] md:my-0 md:w-[687px] ">
+            <Slider {...slider}>
+              {slider_info.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-[20px] p-[60px] relative mt-[80px]"
+                >
+                  <p className="mt-4  font-secondary font-normal text-justify text-[16px] md:mt-0 md:text-[22px] md:leading-[44px] text-info-color mb-[37px] md:w-[567px]">
+                    {item.review}
+                  </p>
+                  <div className="md:flex justify-between ">
+                    <div>
+                      <h5 className="font-primary capitalize text-[24px] font-bold leading-[36px] text-[#30344E] mb-1">
+                        {item.name}
+                      </h5>
+                      <p className="font-secondary font-normal text-[16px] leading-[26px] text-[#30344E] capitalize">
+                        {item.title}
+                      </p>
+                    </div>
+                    <div className="flex items-end gap-1 mt-3 md:mt-0">
+                      {[...Array(5)].map((unused, index) => (
+                        <span key={index}>
+                          {index < item.rating ? (
+                            <FaStar color="#ffc107" size={18} />
+                          ) : (
+                            <FaStar color="#ddd" size={18} />
+                          )}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="h-[124px] w-[124px] outline-10 rounded-[50%] absolute top-[-80px]  outline-[#F7F7FC]">
+                    <img
+                      src={item.img}
+                      alt="human_one"
+                      className="rounded-[50%]"
+                    />
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div>
         </div>
       </Container>
     </div>
