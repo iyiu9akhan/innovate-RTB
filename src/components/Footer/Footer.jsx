@@ -56,9 +56,9 @@ function Footer() {
     },
   ];
   return (
-    <div className="bg-[#F7F7FC] pt-[291px]">
+    <div className="bg-[#F7F7FC] pt-[100px] md:pt-[291px]">
       <Container>
-        <div className="pb-[86px] flex justify-between">
+        <div className="pb-[86px] md:flex justify-between">
           <div>
             <img
               src={footer_logo}
