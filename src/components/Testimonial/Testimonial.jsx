@@ -109,7 +109,7 @@ function Testimonial() {
     <div className="bg-[#F4FAFA] py-[50px] md:py-[200px]">
       <Container>
         <div className="md:flex justify-between">
-          <div>
+          <div className="flex flex-col items-center md:flex md:items-start">
             <h3 className="font-primary font-bold text-[35px] md:text-[46px] leading-[58px] text-blue-color md:w-[594px] mb-[20px]">
               What they are talking about us?
             </h3>
@@ -119,38 +119,38 @@ function Testimonial() {
               descriptive.
             </p>
             <Button>Get Started</Button>
-            <div className="mt-[85px]">
+            <div className="mt-[85px] flex flex-col ">
               <div className="flex relative mr-[30px]">
                 <div className="absolute">
                   <img
                     src={human_one}
                     alt="#human_one"
-                    className="w-[58px] h-[58px] bg-red-900 rounded-[50%] outline-2 outline-white"
+                    className="w-[58px] h-[58px]  rounded-[50%] outline-2 outline-white"
                   />
                 </div>
                 <div className="absolute left-[40px]">
                   <img
                     src={human_two}
                     alt="#human_two"
-                    className="w-[58px] h-[58px] bg-red-900 rounded-[50%] outline-2 outline-white"
+                    className=" w-[58px] h-[58px]  rounded-[50%] outline-2 outline-white"
                   />
                 </div>
                 <div className="absolute left-[80px]">
                   <img
                     src={human_three}
                     alt="#human_three"
-                    className="w-[58px] h-[58px] bg-red-900 rounded-[50%] outline-2 outline-white"
+                    className="w-[58px] h-[58px]  rounded-[50%] outline-2 outline-white"
                   />
                 </div>
                 <div className="absolute left-[120px]">
                   <img
                     src={human_four}
                     alt="#human_four"
-                    className="w-[58px] h-[58px] bg-red-900 rounded-[50%] outline-2 outline-white"
+                    className="w-[58px] h-[58px]  rounded-[50%] outline-2 outline-white"
                   />
                 </div>
               </div>
-              <div className="ml-[200px] md:ml-[230px] w-[153px]">
+              <div className="ml-[200px] w-[153px] text-center">
                 <div className="flex items-center justify-between ">
                   <h1
                     className="relative font-primary font-black text-[24px] leading-[36px] text-[#52C5B6]

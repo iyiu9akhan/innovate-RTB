@@ -107,7 +107,7 @@ function Footer() {
                           <input
                             type="text"
                             className="mb-10 h-[46px] w-full rounded-[6px] border-1 border-[#D2D2D2]  outline-0 placeholder:text-[11px] md:pl-[24px] md:placeholder:text-[16px] capitalize leading-[26px] font-primary text-black md:mb-0"
-                            placeholder="Your Email Address"
+                            placeholder="Email Address"
                           />
                           <button className="absolute  cursor-pointer h-9 w-9 bg-blueBtn-color rounded-[6px] right-[5px] md:right-[10px] top-[5px] flex items-center justify-center">
                             <FaTelegramPlane size={15} color="white" />

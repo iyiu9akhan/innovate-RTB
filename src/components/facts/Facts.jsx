@@ -26,7 +26,7 @@ function Facts() {
           <div className="mt-[44px] ml-[41px] mr-[45px] content-end">
             <img src={illustration} alt="#illustration" />
           </div>
-          <div className="md:mr-[70px] md:mt-[85px]">
+          <div className="md:mr-[70px] md:mt-[85px] px-[20px] text-center">
             <h4 className="font-primary font-bold text-[35px] md:text-[44px] text-white mb-[45px] md:mb-[64px] md:w-[554px] text-center">
               Trusted by 35,000+ happy customers.
             </h4>

@@ -5,7 +5,7 @@ import { GiCheckMark } from "react-icons/gi";
 import Button from "../Layout/Button";
 import { HiOutlineUserGroup } from "react-icons/hi2";
 import { PiBuildingOffice } from "react-icons/pi";
-// import Slider from "../Layout/slider";
+import Slider from "../Layout/slider";
 // import Slider from "react-slick";
 // import Slider from "react-slick";
 // import Slider from "react-slick";
@@ -80,7 +80,7 @@ function Pricing() {
         </div>
         <div className=" md:flex justify-between ">
           {pricing_data.map((item) => (
-            <div className="mb-[35px] border-1 border-border-gray rounded-[20px] px-[60px] py-[40px] flex flex-col text-center group hover:bg-blueBtn-color transition-all duration-500">
+            <div className="mb-[35px] border-1 border-border-gray rounded-[20px] px-[30px] md:px-[60px] py-[40px] flex flex-col text-center group hover:bg-blueBtn-color transition-all duration-500">
               <div className=" mx-auto group">
                 <div
                   className={`h-[90px] w-[90px] rounded-full flex items-center justify-center mb-8 transition-all duration-500 ${item.icon_bg}`}
