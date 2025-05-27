@@ -15,7 +15,6 @@ function Navbar() {
   const [show, setShow] = useState(false);
 
   const click = () => {
-    console.log("check");
     setShow(!show);
   };
 
