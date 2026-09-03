@@ -1,12 +1,15 @@
-# React + Vite
+Innovate-RTB 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Innovate-RTB is a fast and modern front-end template built with React, Vite, Bootstrap, and Tailwind CSS. It includes Hot Module Replacement (HMR) for live updates, ESLint for clean code, and a clean structure—perfect for quickly launching scalable React applications.
 
-Currently, two official plugins are available:
+Live Demo :
+Check out the live deployment here: https://iyiu9akhan.github.io/innovate-RTB
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Tech Stack & Features :
+- React: A JavaScript library for building user interfaces.
+- Vite: Next-generation frontend tooling for fast development and bundling.
+- Bootstrap: A popular CSS framework for responsive design.
+- Tailwind CSS: A utility-first CSS framework for custom styling.
+- Flowbite-React: UI component library built with Tailwind CSS.
+- ESLint: For identifying and maintaining code quality.
+- HMR (Hot Module Replacement): Instant feedback during development without full page reloads.
