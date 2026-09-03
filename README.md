@@ -13,3 +13,9 @@ Tech Stack & Features :
 - Flowbite-React: UI component library built with Tailwind CSS.
 - ESLint: For identifying and maintaining code quality.
 - HMR (Hot Module Replacement): Instant feedback during development without full page reloads.
+
+Run Locally (follow step by step) :
+  1. git clone https://github.com/iyiu9akhan/innovate-RTB.git
+  2. cd innovate-RTB
+  3. npm install
+  4. npm run dev
